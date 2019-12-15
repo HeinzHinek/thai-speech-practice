@@ -1,0 +1,115 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thai Speech Practice</title>
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://code.responsivevoice.org/responsivevoice.js?key=[APIKEY]"></script>
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="material.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+
+    <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Home</span>
+        <div class="mdl-layout-spacer"></div>
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+          <i class="material-icons">more_vert</i>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+          <li class="mdl-menu__item">About</li>
+          <li class="mdl-menu__item">Contact</li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="main-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+      <header class="main-drawer-header">
+        <img src="images/thai_logo.png" class="main-avatar">
+      </header>
+      <nav class="main-navigation mdl-navigation mdl-color--blue-grey-800">
+        <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
+            role="presentation">home</i>Home</a>
+        <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
+            role="presentation">flag</i>Link</a>
+      </nav>
+    </div>
+
+    <main class="mdl-layout__content mdl-color--grey-100">
+      <div class="main-content mdl-card mdl-color--grey-100"">
+
+        <div class=" main-listening mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+        <div class="main-listening-content mdl-card__supporting-text">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input id="answer-input" class="mdl-textfield__input" type="text" pattern="[0-9]*" inputmode="numeric">
+            <label class="mdl-textfield__label" for="sample2">Number...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+          <button id="submit-btn" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+            SUBMIT
+          </button>
+        </div>
+
+        <div class="mdl-card__supporting-text">
+          <span id="answer-label-correct" class="answer-label">Correct!</span>
+          <span id="answer-label-wrong" class="answer-label">Wrong...</span>
+          <span class="answer-label">&nbsp;</span>
+        </div>
+
+        <div class="mdl-card__supporting-text">
+          Level: <span id="level-indicator"></span>
+        </div>
+
+        <div class="mdl-card__actions">
+          <button id="start-btn" class="mdl-button mdl-button--unelevated mdl-button--accent"><span
+              class="mdl-button__ripple"></span>NEXT WORD</button>
+          <button id="replay-btn" class="mdl-button mdl-button--unelevated"><span
+              class="mdl-button__ripple"></span>REPLAY</button>
+        </div>
+      </div>
+
+  </div>
+  </main>
+
+  <footer>
+    <div>
+      <a href="https://responsivevoice.org">ResponsiveVoice-NonCommercial</a> licensed under <a
+        href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img title="ResponsiveVoice Text To Speech"
+          src="https://responsivevoice.org/wp-content/uploads/2014/08/95x15.png" alt="95x15" width="95"
+          height="15" /></a>
+    </div>
+  </footer>
+  </div>
+
+  <script src="material.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
